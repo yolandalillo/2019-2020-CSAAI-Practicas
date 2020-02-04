@@ -1,0 +1,18 @@
+
+h1, h2  {font-family: arial;}
+
+body {background-image: url("pueblo3.jpg");
+      background-position: 0px;
+      background-repeat: not-repeat;
+      background-size: 1300px;
+    }
+h2 { border: 2px solid lightgreen;
+    padding: 10px;
+    margin: 10px;
+    color: lightgreen;}
+
+p { border: 6px solid lightblue;
+    padding: 20px;
+    margin: 20px;
+    color: lightblue;
+    }
