@@ -1,16 +1,41 @@
 
-h1, h2  {font-family: arial;}
+@font-face{ font-family: "BebasNeue-Regular";
+          src: url("BebasNeue-Regular.ttf");}
+
+@font-face{ font-family: "BebasNeue-Light";
+            src: url("BebasNeue-Light.ttf");}
+
+@font-face{ font-family: "BebasNeue-Book";
+            src: url("BebasNeue-Book.ttf");}
 
 body {background-image: url("c9.png");
       background-size: cover;
     }
-h2 { border: 2px solid red;
-    padding: 10px;
-    margin: 10px;
-    color: black;}
 
-p { border: 6px solid black;
-    padding: 20px;
-    margin: 20px;
+.imagen {float: right;
+        margin-right: 50px;
+}
+
+h1 { background-color: #f5e9e9;
+    opacity: 0.6;
+    margin-left: center;
+    margin-right: center;
+    color: #000000;
+    font-family: "BebasNeue-Regular";
+    font-size: 40px;
+    text-align: center;
+    font-weight: lighter;}
+
+h2 {
     color: red;
+    font-family: "BebasNeue-Book";
+    text-align: center;}
+
+p { border: 2px solid red;
+    padding: 20px;
+    margin-right: 200px;
+    margin-left: 20px;
+    color: white;
+    font-family: "BebasNeue-Light";
+    font-weight: bold;
     }
