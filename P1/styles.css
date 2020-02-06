@@ -27,9 +27,14 @@ h1 { background-color: #f5e9e9;
     font-weight: lighter;}
 
 h2 {
+    background-color: #f5e9e9;
+    opacity: 0.6;
+    margin-left: 200px;
+    margin-right: 300px;
     color: red;
     font-family: "BebasNeue-Book";
-    text-align: center;}
+    text-align: center;
+    }
 
 p { border: 2px solid red;
     padding: 20px;
