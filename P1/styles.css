@@ -8,14 +8,14 @@
 @font-face{ font-family: "BebasNeue-Book";
             src: url("BebasNeue-Book.ttf");}
 
-body {background-image: url("c9.png");
+body {background-image: url("casapap.png");
       background-size: cover;
     }
 
 .imagen {float: right;
         margin-right: 50px;
 }
-a{color: black;
+a{color: white;
   font-family: "BebasNeue-Light";
   font-weight: bold;}
 
@@ -45,7 +45,7 @@ p, ul { border: 2px solid red;
     padding: 20px;
     margin-right: 200px;
     margin-left: 20px;
-    color: white;
+    color: black;
     font-family: "BebasNeue-Light";
     font-weight: bold;
     }
