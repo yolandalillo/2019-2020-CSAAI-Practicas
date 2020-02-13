@@ -41,7 +41,9 @@ h2 {
 
 
 
-p, ul { border: 2px solid red;
+p, ul { border: 2px;
+    border: double;
+    border-color: red;
     padding: 20px;
     margin-right: 200px;
     margin-left: 20px;
