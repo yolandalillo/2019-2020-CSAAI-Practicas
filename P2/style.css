@@ -1,0 +1,38 @@
+body {background-image: url("c5.png");
+      background-repeat: no-repeat;
+      background-image: center;
+      background-image: fixed;
+  }
+
+@font-face{ font-family: "BebasNeue-Regular";
+            src: url("BebasNeue-Regular.ttf");}
+
+ #display{
+   border-style: dashed;
+   border-color: black;
+   text-align: center;
+   background-color: white;
+   opacity: 0.6;
+   margin-left: 190px;
+   margin-right: 190px;
+
+ }
+ div{
+   text-align: center;
+   padding-bottom: 10px;
+   padding-top: 60px;
+ }
+
+.boton{
+  border: 3px groove ;
+  background-color: black;
+  border-radius: 2px;
+  border: 2px;
+  color:  white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 20px;
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
