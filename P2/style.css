@@ -1,7 +1,5 @@
-body {background-image: url("c5.png");
+body {background-image: url("c12.png");
       background-repeat: no-repeat;
-      background-image: center;
-      background-image: fixed;
       background-size: cover;
 }
 
@@ -9,19 +7,30 @@ body {background-image: url("c5.png");
             src: url("BebasNeue-Regular.ttf");}
 
  #display{
-   border-style: dashed;
+   border-style: outset;
    border-color: black;
    text-align: center;
-   background-color: white;
-   opacity: 0.6;
+   background-color: #d2e3c8;
+   opacity: 0.7;
    margin-left: 190px;
    margin-right: 190px;
+   font-size: 50px;
 
  }
- div{
+ .calculadora{
    text-align: center;
-   padding-bottom: 10px;
-   padding-top: 60px;
+   padding-bottom: 20px;
+   padding-top: 20px;
+ }
+
+ .botones{
+   border: ridge;
+   border-color: black;
+   background-color: #d2e3c8;
+   opacity: 0.7;
+   margin-left: 190px;
+   margin-right: 190px;
+   padding: 20px;
  }
 
 .boton{
@@ -32,7 +41,7 @@ body {background-image: url("c5.png");
   color:  white;
   padding-left: 10px;
   padding-right: 10px;
-  font-size: 20px;
+  font-size: 50px;
   margin-top: 5px;
   margin-left: 2px;
   margin-right: 2px;
