@@ -2,7 +2,8 @@ body {background-image: url("c5.png");
       background-repeat: no-repeat;
       background-image: center;
       background-image: fixed;
-  }
+      background-size: cover;
+}
 
 @font-face{ font-family: "BebasNeue-Regular";
             src: url("BebasNeue-Regular.ttf");}
