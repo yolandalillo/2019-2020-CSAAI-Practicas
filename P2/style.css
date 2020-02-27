@@ -17,6 +17,13 @@ body {background-image: url("c12.png");
    font-size: 50px;
 
  }
+
+ #display:hover {
+  border-color: white;
+  background-color: #480925;
+  color: white;
+}
+
  .calculadora{
    text-align: center;
    padding-bottom: 20px;
@@ -46,6 +53,10 @@ body {background-image: url("c12.png");
   margin-left: 2px;
   margin-right: 2px;
 }
+.cdigito:hover {
+ color: white;
+ background-color: #480925;
+}
 
 .operador{
   border: 3px groove ;
@@ -59,4 +70,8 @@ body {background-image: url("c12.png");
   margin-top: 5px;
   margin-left: 2px;
   margin-right: 2px;
+}
+.operador:hover {
+ color: white;
+ background-color: #480925;
 }
