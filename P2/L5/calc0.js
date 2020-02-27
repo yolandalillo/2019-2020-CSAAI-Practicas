@@ -4,7 +4,7 @@ display = document.getElementById("display")
 //eliminamos boton1 y boton2 porque ya no tenemos el id
 suma = document.getElementById("suma")
 igual = document.getElementById("igual")
-clear = document.getElementById("clear")
+clear  = document.getElementById("clear")
 
 let digitos = document.getElementsByClassName('cdigito');
 

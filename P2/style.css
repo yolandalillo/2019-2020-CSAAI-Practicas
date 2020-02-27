@@ -33,7 +33,21 @@ body {background-image: url("c12.png");
    padding: 20px;
  }
 
-.boton{
+.cdigito{
+  border: 3px groove ;
+  background-color: black;
+  border-radius: 2px;
+  border: 2px;
+  color:  white;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 50px;
+  margin-top: 5px;
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+.operador{
   border: 3px groove ;
   background-color: black;
   border-radius: 2px;
