@@ -40,7 +40,7 @@ body {background-image: url("c12.png");
    padding: 20px;
  }
 
-.cdigito{
+.cdigito, .operador, .op{
   border: 3px groove ;
   background-color: black;
   border-radius: 2px;
@@ -53,25 +53,7 @@ body {background-image: url("c12.png");
   margin-left: 2px;
   margin-right: 2px;
 }
-.cdigito:hover {
- color: white;
- background-color: #480925;
-}
-
-.operador{
-  border: 3px groove ;
-  background-color: black;
-  border-radius: 2px;
-  border: 2px;
-  color:  white;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 50px;
-  margin-top: 5px;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-.operador:hover {
+.cdigito:hover, .operador:hover, .op:hover{
  color: white;
  background-color: #480925;
 }
