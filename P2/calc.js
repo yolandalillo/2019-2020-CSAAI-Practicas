@@ -5,7 +5,7 @@ display = document.getElementById("display")
 igual  = document.getElementById("igual")
 clear = document.getElementById("clear")
 coma = document.getElementById("coma")
-
+//variables de alcance local
 let digitos = document.getElementsByClassName('cdigito');
 let operadores = document.getElementsByClassName('operador')
 
