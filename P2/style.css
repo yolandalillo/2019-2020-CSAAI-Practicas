@@ -30,6 +30,7 @@ body {background-image: url("c12.png");
    padding-top: 20px;
  }
 
+/*Para el fondo de los botones */
  .botones{
    border: ridge;
    border-color: black;
@@ -40,7 +41,8 @@ body {background-image: url("c12.png");
    padding: 20px;
  }
 
-.cdigito, .operador, .op{
+/*Asi mejor que poner todas las clases, más claro de entender */ 
+button{
   border: 3px groove ;
   background-color: black;
   border-radius: 2px;
@@ -53,7 +55,7 @@ body {background-image: url("c12.png");
   margin-left: 2px;
   margin-right: 2px;
 }
-.cdigito:hover, .operador:hover, .op:hover{
+button:hover{
  color: white;
  background-color: #480925;
 }
