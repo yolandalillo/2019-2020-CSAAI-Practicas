@@ -9,3 +9,9 @@ https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P1/
 
 Práctica 2 Calculadora:
 https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P2/
+
+Práctica 3 Videojuego retro
+
+Práctica 4 Vídeo
+
+Práctica 5 Procesado de imagen
