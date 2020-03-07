@@ -43,3 +43,9 @@ igual.onclick = () => {
 clear.onclick = () => {
   display.innerHTML = "0";
 }
+
+//Eliminar solo un dígito
+
+del.onclick = () => {
+  display.innerHTML = display.innerHTML.slice(0,-1);
+}
