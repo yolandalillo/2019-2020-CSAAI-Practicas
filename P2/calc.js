@@ -33,7 +33,7 @@ function digito(boton) {
   }
 }
 
-//-- Evaluar la expresion
+// Evaluamos la expresión para el igual
 igual.onclick = () => {
   display.innerHTML = eval(display.innerHTML);
   console.log("Resultado");
@@ -45,7 +45,6 @@ clear.onclick = () => {
 }
 
 //Eliminar solo un dígito
-
 del.onclick = () => {
   display.innerHTML = display.innerHTML.slice(0,-1);
 }
