@@ -75,6 +75,9 @@ function animacion()
   if (bola_x >= canvas.width) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola_vx = bola_vx * -1;
+  //no estoy muy segura si menor o menor e igual
+  }else if (bola_x <= 0) {
+    bola_vx = bola_vx * -1;
   }
 
   //-- Actualizar coordenada x de la bola, en funcion de
