@@ -1,0 +1,9 @@
+/* Fondo */
+body {
+    background-color: lightblue;
+}
+
+/* Estilo canvas */
+#canvas {
+  background-color: black;
+}
