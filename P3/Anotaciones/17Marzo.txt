@@ -1,0 +1,120 @@
+CLASE ONLINE 17/03/2020
+CODIFICACION MULTIMEDIA I
+Anotaciones clase
+
+ATENUACION
+
+la frecuencia del tono puro f solo depende de la fuente,
+no cambia nunca. La forma de onda de ese tono puro es una
+sinusoide si no movemos una distancia, la frecuancia del
+tono atenuado es la misma, misma forma pero más pequeña.
+
+CAMBIO DE MEDIO
+
+La frecuencia solo depende de la fuente, no cambia da igual
+que en el medio metamos helio o lo que sea, de manera natural no se puede cambiar
+eso. La forma del tono exactamente igual.
+
+DISTORSIÓN
+
+Tendremos una suma infinita de tonos que al sumarlos me
+la forma la señal original.
+Mismo tonos pero atenuados, mas pequeños, si sumamos los
+dos tonos en el punto destino(tonos atenuados) obtenemos
+una segunda onda igual a la principal pero atenuada (para
+esto los dos tonos f1 y f2 se tiene que atenuar por igual)
+El media puede hacer que unas frecuencias se atenuen mucho
+y otras se atenuen poco. Por tanto la respuesta es no, no 
+es la misma forma pero atenuada.
+Con distorsión la onda que recibo en el destino, escuchare
+algo distinto no solo en volumen, sino diferente al origen. Si
+no hay distorsión si obtengo la señal exactamente igual (Esto
+no ocurre, no hay un medio perfecto).
+
+AUDIO ELECTRÓNICO
+
+El micrófono convierte esas vibraciones de las moléculas, 
+en voltaje, pasamos a un conductor electrico (señal analógica).
+El microfono lo que me hace es que aparece una señal análoga 
+en la que vibran los electrones en lugar de las moléculas. Se llama analógica
+porque es distinta porque las propiedades son distintas pero 
+es análoga a la que tenemos en el medio fisico, tienen la misma forma,
+representan la misma información.
+
+El voltaje empieza a seguir los golpes de la moléculas, lo ideal que 
+la forma de la señal electri y de corriente analógica sera parecida pero
+no igual porque obviamente se perderá información.
+
+Si tenemos unas señal con un voltaje (microfono genera esa señal de tensión),
+si metemos una carga, generará una señal de intensidad, los electrones se mueven
+adelante y atras siguiendo el ritmo de las moléculas.
+
+ELECTRÓNICA ANALÓGICA
+
+Consiste en que los electrones que se mueven al son de en este caso
+el audio, y lo que queremos los ingenieros es domarlos, conseguir que hagan
+lo que nosotros queremos.
+Los científicos miden las reglas por las que se comportan los electrones
+aunque no tienen ni idea, los ingenieros las aplicamos para domar los electrones
+y que hagan lo que nosotros queremos.
+Vemos un ejemplo (encender un led)
+Si la resistencia es muy bajita el LED se va a iluminar mucho, para tener la corriente 
+máxima por el led le doy un resistencia minima pero asi consumire mucho
+
+SEÑALES ANALÓGICAS E INFORMACIÓN
+
+Si recibes una señal ya no puedes volver atrás, no sabes como era la original.
+Otra cosa que hace que se degrade la señal es el ruido.
+Forma mejor en la que no se degraden, en el mundo fisico siempre 
+habrá degradación pero en el medio analógico podemos transportar y almacenar
+garantizando que la informacion no se degrada, dentro del mundo digital.
+Si tenemos la información en digital puede permanecer para siempre, no se degrada.
+
+NIVELES
+
+El silicio es un cristal, los atomos estan perfectamente en sus sitio, no hay movilidad
+de electrones, cada electron con su atomo (de manera general), es un super aislante como cualquier
+cristal. Es un aislante perfecto.
+En los conductores, los electrones fluyen libremente, parece qe el atomo fuese unico, como si no hubiese
+distinción.
+Si juntas los semicondutores de tipo P y de tipo N aparecen los primeros componentes
+como podrian ser los diodos, los led. Un diodo no se puede generar en la naturaleza se
+genera artificialmente. Si juntamos tres silicios tipo P, N ,P aparecen los transistores que
+son elementos como un grifo que regulamos la corriente que pasa, lo regulamos con electrones. En 
+este nivel  de transistores entra toda la electronica analogica, para amplificar con menos
+distorsion todas las señaels analógicas nosotros no vamos por este camino, porque tb un grifo
+lo puedes abrir todo o nada (abierto o cerrado) esto se puede hacer con un transisor haciendolo
+que funcione de forma discreta con semiconductores. Los transistores CMOD(mirar como se escribe), mjuy
+pequeños que funcionan muy bien para esto, aqui entramos en lo digital, lo binario (0,1). Por ahora nos quedamos
+en los transistores que ya llegamos a los binario.
+
+AUDIO DIGITAL
+
+La figura es super importante. Para solucionar el problema de conseguir transmitir información
+sin degradación. Partimos de unas señal física que la convertimos en analogica ahi habra una distorsion
+inevitable cuando mejor sea el microfono menos distorsión. Porque no en lugar de trabajar con las formas
+de la ondas, trabajamos con numeros que es genial porque consigues que toda tu informacion este guardada en numeros
+y los consigues almacenar y transportar por tanto triunfas. El 3 por mucho que lo emitas siempre sera el 3
+por mucho ruido de fondo que tengamos lo vamos a reconocer. No se van a degradar los numeros si tienes cuidados
+y los tratas inteligentemente, los números son para toda la vida. Cuanod decimos que un sistemas es digital nos referimos
+a cuando trabajamos con numeros, los circuitos digitales son circuitos especializados en la manippulacion transporte y almacenamiento
+de números. Esta conversion la hacemos con el conversor analógico a digital, si lo consigo los tengo para siempre, depues los meto
+al cirucito digital. Recostruyo la señal con el conversor digital analogico para por el altavoz escuchar la señal.
+Es inevitable que la señal tenga degradación, tenemos cosas que son inevitables pero cuando ya es digital no se degrada siempre que vayamos 
+con cuidado. Si genermos cirucitos digital podemos recontruir la señal y ahi tb es inevitable que varie. Desde que hablo hasta que reproduzco
+cambia y con eso no podemos luchar.
+Los mejores del mundo digital, son los que puedan domar los números, los matematicos (cracks).
+
+ELECTRÓNICA DIGITAL
+
+En los circuitos electronicos trabajamos los numeros, un diseñador o ingeniero debe ahcer que los numeros
+hagan lo que nosotros queremos. En la sociedad actual es super eficiente codificar los numeros en binario
+porque tenemos una tecnologia que nos permite hacerlo barato, rápido y fácil.
+
+BITS: NIVELES
+
+Elementos que hay para trabajar con esos bits que son partes de números.La electronica digital es super sencilla
+porque dentro de ella solo trabajamos los chips digitales porque a nivel de circuitos, solo necesitamos cables (conductores), manipular bits
+puertas logicas y ..... que lo hacemos con los biestables.
+
+
