@@ -19,5 +19,6 @@ h1{
 
 p{
   text-align: center;
-  font: 20px Arial;
+  font: 15px Arial;
+  line-height: 0.5;
 }
