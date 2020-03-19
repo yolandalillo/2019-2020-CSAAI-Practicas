@@ -144,10 +144,10 @@ setInterval(()=>{
 window.onkeydown = (e) => {
 
   switch (e.key) {
-    case "a":
+    case "ArrowDown":
       raqI.v = raqI.v_ini;
       break;
-    case "q":
+    case "ArrowUp":
       raqI.v = raqI.v_ini * -1;
       break;
     case " ":
@@ -162,7 +162,7 @@ window.onkeydown = (e) => {
 
 //-- Retrollamada de la liberacion de teclas
 window.onkeyup = (e) => {
-  if (e.key == "a" || e.key == "q"){
+  if (e.key == "ArrowDown" || e.key == "ArrowUp"){
     //-- Quitar velocidad de la raqueta
     raqI.v = 0;
   }
