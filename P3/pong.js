@@ -60,9 +60,9 @@ function animacion()
   if (bola.x >= canvas.width) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vx = bola.vx * -1;
-  } else if (bola.x <= 0 ) { //rebote lado izq
-    bola.vx = bola.vx * -1;
-  }
+  }// else if (bola.x <= 0 ) { //rebote lado izq
+  //  bola.vx = bola.vx * -1;
+  //}
   //SEGUIR INTENTADO QUE SU MUEVA LA BOLA NO SOLO DE IZQ A DCHA
 
   //-- Comprobar si hay colisión con la raqueta izquierda
