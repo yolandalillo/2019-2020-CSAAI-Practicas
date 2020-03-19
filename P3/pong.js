@@ -26,19 +26,37 @@ const raqI = {
   //-- Velocidad (variable)
   v : 0,
 }
+const raqD = {
+  //-- Constante: Tamaño de la raqueta
+  width : 10,
+  height: 40,
 
-function raqI_init()
+  //-- Constante: Posicion inicial
+  x_ini : 540,
+  y_ini : 300,
+
+  //-- Constante: Velocidad
+  v_ini : 3,
+
+  //-- Velocidad (variable)
+  v : 0,
+}
+
+function raq_init()
 {
   raqI.x = raqI.x_ini;
   raqI.y = raqI.y_ini;
+  raqD.x = raqD.x_ini;
+  raqD.y = raqD.y_ini;
 }
 
-function raqI_update()
+function raq_update()
 {
   raqI.y += raqI.v;
+  raqD.y += raqD.v;
 }
 
-function raqI_draw()
+function raq_draw()
 {
   //------- Dibujar las raquetas
   ctx.beginPath();
@@ -46,10 +64,14 @@ function raqI_draw()
 
   //-- Raqueta izquierda
   ctx.rect(raqI.x, raqI.y, raqI.width, raqI.height);
+  //--Raqueta derecha
+  ctx.rect(raqD.x, raqD.y, raqD.width, raqD.height);
+
 
   //-- Pintar!
   ctx.fill();
 }
+
 
 //-- Pintar todos los objetos en el canvas
 function draw() {
@@ -57,18 +79,8 @@ function draw() {
   //----- Dibujar la Bola
   bola.draw();
 
-  //-- Dibunar la raqueta izquierda
-  raqI_draw();
-
-  //------- Dibujar la raqueta derecha
-  ctx.beginPath();
-  ctx.fillStyle='white';
-
-  //-- Raqueta derecha
-  ctx.rect(540, 300, 10, 40);
-
-  //-- Pintar!
-  ctx.fill();
+  //-- Dibujar las raquetas
+  raq_draw();
 
   //--------- Dibujar la red
   ctx.beginPath();
@@ -99,8 +111,9 @@ function animacion()
 
   //-- Actualizar las posiciones de los objetos móviles
 
-  //-- Actualizar la raqueta con la velocidad actual
-  raqI_update();
+  //-- Actualizar las raqueta con la velocidad actual
+  raq_update();
+
 
 
   //-- Comprobar si la bola ha alcanzado el límite derecho
@@ -114,6 +127,11 @@ function animacion()
   //-- Comprobar si hay colisión con la raqueta izquierda
   if (bola.x >= raqI.x && bola.x <=(raqI.x + raqI.width) &&
       bola.y >= raqI.y && bola.y <=(raqI.y + raqI.height)) {
+    bola.vx = bola.vx * -1;
+  }
+  //-- Comprobar si hay colisión con la raqueta izquierda
+  if (bola.x >= raqD.x && bola.x <=(raqD.x + raqD.width) &&
+      bola.y >= raqD.y && bola.y <=(raqD.y + raqD.height)) {
     bola.vx = bola.vx * -1;
   }
 
@@ -132,8 +150,9 @@ function animacion()
 const bola = new Bola(ctx);
 bola.init();
 
-//-- Inicializar la raqueta a su posicion inicial
-raqI_init();
+//-- Inicializar las raquetas a su posicion inicial
+raq_init();
+
 
 //-- Arrancar la animación
 setInterval(()=>{
@@ -150,6 +169,12 @@ window.onkeydown = (e) => {
     case "ArrowUp":
       raqI.v = raqI.v_ini * -1;
       break;
+    case "q":
+      raqD.v = raqD.v_ini;
+      break;
+    case "a":
+      raqD.v = raqD.v_ini * -1;
+      break;
     case " ":
       //-- Llevar bola a su posicion incicial
       bola.init();
@@ -162,8 +187,9 @@ window.onkeydown = (e) => {
 
 //-- Retrollamada de la liberacion de teclas
 window.onkeyup = (e) => {
-  if (e.key == "ArrowDown" || e.key == "ArrowUp"){
+  if (e.key == "ArrowDown" || e.key == "ArrowUp" ||e.key == "q" || e.key == "a"){
     //-- Quitar velocidad de la raqueta
     raqI.v = 0;
+    raqD.v = 0;
   }
 }
