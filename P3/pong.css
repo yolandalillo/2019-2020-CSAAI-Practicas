@@ -13,3 +13,11 @@ body {
   display: block;
   width: 750px;
 }
+h1{
+  text-align: center;
+}
+
+p{
+  text-align: center;
+  font: 20px Arial;
+}
