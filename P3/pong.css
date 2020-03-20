@@ -1,11 +1,14 @@
 /* Fondo de la página */
 body {
     background-color: #21E69B;
+
 }
 
 /* Estilo para el canvas: Negro */
 #canvas {
   background-color: black;
+  /*background-image: url("cc.png");
+  background-position: center;*/
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -19,6 +22,6 @@ h1{
 
 p{
   text-align: center;
-  font: 15px Arial;
+  font: 15px helvetica;
   line-height: 0.5;
 }
