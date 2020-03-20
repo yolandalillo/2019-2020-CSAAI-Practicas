@@ -60,10 +60,16 @@ function animacion()
   if (bola.x >= canvas.width) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vx = bola.vx * -1;
-  }// else if (bola.x <= 0 ) { //rebote lado izq
-  //  bola.vx = bola.vx * -1;
-  //}
-  //SEGUIR INTENTADO QUE SU MUEVA LA BOLA NO SOLO DE IZQ A DCHA
+  }else if (bola.x <= 0 ) { //rebote lado izq
+    bola.vx = bola.vx * -1;
+  }
+  if (bola.y >= canvas.height) {
+    //-- Hay colisión. Cambiar el signo de la bola
+    bola.vy = bola.vy * -1;
+  }else if (bola.y <= 0 ) {
+    bola.vy = bola.vy * -1;
+  }
+
 
   //-- Comprobar si hay colisión con la raqueta izquierda
   if (bola.x >= raqI.x && bola.x <=(raqI.x + raqI.width) &&
@@ -75,6 +81,7 @@ function animacion()
       bola.y >= raqD.y && bola.y <=(raqD.y + raqD.height)) {
     bola.vx = bola.vx * -1;
   }
+
 
   //-- Actualizar coordenada x de la bola, en funcion de
   //-- su velocidad
@@ -127,6 +134,7 @@ window.onkeydown = (e) => {
 
       //-- Darle velocidad
       bola.vx = bola.vx_ini;
+      bola.vy = bola.vy_ini;
     default:
   }
 }
