@@ -1,7 +1,7 @@
 class Bola {
-  //constructor se ejecuta cada vez que se crea un objeto nuevo
+  //-- Constructor se ejecuta cada vez que se crea un objeto nuevo
   constructor(ctx) {
-    //palabra reservada this:este objeto
+    //-- Palabra reservada this:este objeto
     //-- Guardar el contexto de dibujo
     this.ctx = ctx;
 
@@ -30,7 +30,7 @@ class Bola {
   }
 
   draw() {
-    //----- Dibujar la Bola
+    //-- Dibujar la Bola
     this.ctx.beginPath();
     this.ctx.fillStyle='white';
 
