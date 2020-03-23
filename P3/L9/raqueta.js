@@ -1,5 +1,4 @@
 //-- Objeto raqueta
-// No hacemos cambios de pong 18 a pong 19
 class Raqueta
 {
   constructor(ctx) {
