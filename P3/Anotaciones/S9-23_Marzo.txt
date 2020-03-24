@@ -1,0 +1,103 @@
+CLASE ONLINE 24/03/2020
+S9:CODIFICACION MULTIMEDIA II
+Anotaciones clase
+
+AUDIO
+
+Partimos del esquema anterior.
+Cuando uno empieza hablar sus cuerdas vocales empiezan a vibrar,
+esas moleculas de aire vibran igual que nuestras cuerdas vocales, 
+ahora en lugar de vibrar las cuerdas vibran esas ondas físicas. Esas
+ondas queremos transmitirlas pero por la forma natural de la onda no
+se puede. Por tanto, creamos los micrófonos que convierten la señal
+en electrica, entonces los electrones tiene forma análoga a la de
+la naturaleza física. Así podemos domar los electrones más fácilmente
+que la señal física. La información del audio esta asociada a la
+forma de la onda (señal electrica), si la vamos degradando mucho vamos
+a ir perdiendo información y no hay manera de  recuperarlo, solo se puede
+mejorar con los sistemas digitales. Las vibraciones de las moleculas
+las convertimos en números para pasarlas al mundo digital, porque los 
+numeros los recibes o no los recibes, pero los numeros no se degradan, los 
+puedes tranformas, almacenar y transportar. Los números te da igual que tipo
+de señal muestre. En funcion de los numeros que tu le metas ese circuito hace
+una cosa u otra, ahí creas algoritmos que manipulan esos numeros y te generan
+otros de salida.La fase final es recuperar las vibraciones de las 
+moléculas para escuchar esos sonidos si es que son señales de audio. Los convertimos
+en su señal analógica que nosotros no podemos oir (no percibimos electrones), esto
+lo pasamos en un altavoz para tener una señal acústica que da golpes a las moléculas
+y así ya lo podemos escuchar nosotros. Lo bueno de lo digital es que es infinito, ya no 
+va a cambiar más.
+Ahora nos vamos a centrar en que ocurre desde que tenemos una señal de audio hasta que
+la transmitimos por internet. En las siguientes clases veremos la siguiente fase.
+-Conversor A/D: Fase de captura, señal analógica se transforma a número (muestras).
+-Codificador (CODEC): recibe muchos números, se tiene que quedar con la menor cantidad de
+datos.
+-Encapsulado: Hacemos paquetes de las muestras para enviar por Internet, usando UDP.
+En el otro lado,receptor, tendremos lo mismo pero al contrario.
+
+*CONVERSIÓN ANALÓGICO-DIGITAL
+
+Tenemos nuestros electrones que vibran y al final nos sale un chorro de números.
+Tenemos dos fases, esta señal de la naturaleza y todas son continuas y derivables.
+-Muestreo
+No me vale la señal continua, tengo que discretizarla, queremos trabajar con cosas
+finitas. Hacemos un muestreo en el tiempo, normalmente con números enteros, nos fijamos
+en el tiempo, que ocurre en cada instante. Este muestreo se hace con un tiempo fijo, que
+es nuestro periodo de muestreo o frecuencia de muestreo podemos trabajar con cualquiera
+de las dos cosas.
+En la imagen dibujo intermedio es un interruptor.
+Este proceso es el teorema de Nyquist que me garantiza que los numeros los podre reconvertir
+en su señal original sin perder calidad, que es exactamente igual, en este proceso en otros
+procesos más adelante si perderemos.
+Ejemplo: Una señal de audio entre 0 y 1Khz, si muestreas al menos a la frecuencia de 2kHz
+garantizamos su recontrucion total.
+Ejercicio:Se tiene una señal de audio de ancho de banda de 8Khz que se muestrea a las
+frecuencias de 20Khz y a 40Khz. ¿Cual de las dos señales digitales tendrá más calidad?
+¿La de 20Khz o la de 40Khz? (suponiendo que no hay cuantificación)
+Estamos hablando a nivel de muestreo, cuanto mayor sea la frecuencia mayor calidad (lo diría
+un comercial), nosotros como ingenieros recordamos lo que nos dice nyquist por tanto una señal
+muestreada a 16kHz es exactamente igual, entonces las dos se reconstruyen exactamente igual pero
+la de 40khz tiene más muestras redundantes que no necesitas y no te suman nada de calidad. En el mercado
+no puedes elegir directamente uno de 16kHz, con 20khz me sobra pero bueno es la más óptima.
+-Cuantificación
+Tengo que leer las muestras y ponerlas en números, tenemos que dar un nivel según sus bits.
+La idea es como cuando redondeas, dar precisión. Tenemos un sistema de 3 bits, solo podemos 
+representar 8 niveles, podemos trabajar si signo del 0 al 7 o con signos, lo mismo pero desplazado.
+La primera muestra me da 0 la cuantizo con 0, el voltaje de la siguiente muestra es de 1.856 entonces
+esa muestra la tengo que redondear a 2, que es el nivel 010 y así con las demás redondeamos a nivel
+más cercano. Al final tu señal electrica discreta al cuantificarla obtenemos números binarios, al redondear 
+siempre metemos algún error. A la salida obtenemos un chorro de bits que irán a una velocidad.
+Ejemplo:Una señal de audio se muestrea a una frecuencia de 1Khz y se usa un conversor A/D de 8 bits. 
+¿Cual es el bitrate del audio digital?
+Se están tomando 1000 muestras por segundo, y como cada muestra es de 8 bits, se tendrá un bitrate
+de 8000 bits por segundo (8Kbps).
+
+*FORMATOS PCM Y LPCM
+
+*CODECS
+
+Intentamos tener el menor número de bits posible, y si consigo que su calidad sea lo más parecida a la principal.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
