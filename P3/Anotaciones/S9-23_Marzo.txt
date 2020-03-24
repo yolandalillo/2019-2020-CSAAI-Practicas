@@ -2,7 +2,7 @@ CLASE ONLINE 24/03/2020
 S9:CODIFICACION MULTIMEDIA II
 Anotaciones clase
 
-AUDIO
+1.AUDIO
 
 Partimos del esquema anterior.
 Cuando uno empieza hablar sus cuerdas vocales empiezan a vibrar,
@@ -48,9 +48,11 @@ de las dos cosas.
 En la imagen dibujo intermedio es un interruptor.
 Este proceso es el teorema de Nyquist que me garantiza que los numeros los podre reconvertir
 en su señal original sin perder calidad, que es exactamente igual, en este proceso en otros
-procesos más adelante si perderemos.
+procesos más adelante si perderemos.z
+
 Ejemplo: Una señal de audio entre 0 y 1Khz, si muestreas al menos a la frecuencia de 2kHz
 garantizamos su recontrucion total.
+
 Ejercicio:Se tiene una señal de audio de ancho de banda de 8Khz que se muestrea a las
 frecuencias de 20Khz y a 40Khz. ¿Cual de las dos señales digitales tendrá más calidad?
 ¿La de 20Khz o la de 40Khz? (suponiendo que no hay cuantificación)
@@ -59,6 +61,7 @@ un comercial), nosotros como ingenieros recordamos lo que nos dice nyquist por t
 muestreada a 16kHz es exactamente igual, entonces las dos se reconstruyen exactamente igual pero
 la de 40khz tiene más muestras redundantes que no necesitas y no te suman nada de calidad. En el mercado
 no puedes elegir directamente uno de 16kHz, con 20khz me sobra pero bueno es la más óptima.
+
 -Cuantificación
 Tengo que leer las muestras y ponerlas en números, tenemos que dar un nivel según sus bits.
 La idea es como cuando redondeas, dar precisión. Tenemos un sistema de 3 bits, solo podemos 
@@ -77,6 +80,60 @@ de 8000 bits por segundo (8Kbps).
 *CODECS
 
 Intentamos tener el menor número de bits posible, y si consigo que su calidad sea lo más parecida a la principal.
+
+-Codecs de audio más comunes
+
+*ENCAPSULADO DEL AUDIO
+Nos llegan los bits divididos con la informacion minimizada. 
+
+2.VÍDEO
+
+Es básicamente la misma idea, pero con el vídeo. El esquema general sería el mismo.
+Ahora tenemos una señal electromagnética como es la luz, ya no son moleculas. La
+señal de luz si quiero que llegue lejos lo que hacemos es que esa señal física es 
+limitada por tanto, la convertiremos en una señal electrónica analógica (forma de onda
+similar a la fisica por eso es análoga sino veremos otra cosa). Si lo convertimos a números
+estamos en un circuito digital que internet ya sabe trabjar en ellos. En el destino
+hay unos cirucitos digitales que trabajan con esos numeros luego lo transformamos en la 
+señal analógica y esa pantalla píxeles es lo que nosotro podemos ver. 
+
+*LUZ
+
+La luz al final son ondas electromagnéticas, las frecuencia solo depende de la fuente en
+la naturaleza no hay mecanismos que nos cambien esa frecuencia pero si la longitud de onda
+al pasar la luz de un medio a otro. A frecs electromagneticas muy bajas tenemos las ondas de
+radio, por el hecho de incidir las ondas los electrones se mueven, por eso existe la radio.
+Si vas aumentando las frecs de la ondas electromagnéticas, tenemos microondas, que hacen que
+vibren determinadas moléculas, electrodomésticos como el microondas, calentamiento es porque vibra
+la molecula y tiene friccion y al chocar las moleculas se calienta. Si seguimos subiendo
+tenemos el especto visible, que excitan los receptores que tenemos en nuestros ojos.
+
+-Propiedades:reflexión y refracción
+
+Cuando tienes un cambio de medio, por un lado sale rebotada (lo que estudia la optica) pero hay
+una parte de la onda que se transmite al medio, onda refractada. 
+
+-Colores primarios: Rojo-Verde-Azul
+
+*VIDEO ANALOGICO
+Los tres canales son totalmente independientes, hay que hacerlo por triplicado a nose que los quisieramos
+hacer en blanco y negro que solo usariamos una de las señales.
+
+*VIDEO DIGITAL
+
+3.TRANSMISICÓN DE VÍDEO DIGITAL.
+
+Ahora tendremos muchos pixeles no solo uno. En el CODEC hay que codificarlo si o si porque tenemos
+muchisimas información para asi empaquetarlo y enviarlo por internet.
+
+*CAPTURA DE VIDEO
+La magia esta en un transductor CCD, ese CCD tiene un array de píxeles
+
+*COMPRESION DE VIDEO
+Un sistema PAL, sin codificar. En video siempre usaremos los codec.
+
+*ENCAPSULADO DE VIDEO
+
 
 
 
