@@ -1,14 +1,13 @@
 /* Fondo de la página */
 body {
+    /*background-image: url("dd.png");*/
     background-color: #21E69B;
-
 }
 
 /* Estilo para el canvas: Negro */
 #canvas {
   background-color: black;
-  /*background-image: url("cc.png");
-  background-position: center;*/
+  /*14171D  #272B32*/
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
