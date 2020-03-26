@@ -10,11 +10,27 @@ console.log(`canvas: Anchura: ${canvas.width}, Altura: ${canvas.height}`);
 //-- Obtener el contexto para pintar en el canvas
 const ctx = canvas.getContext("2d");
 
+//-- Obtener Sonidos
+const sonido_raqueta =  new Audio("pong-raqueta.mp3");
+const sonido_rebote = new Audio("pong-rebote.mp3");
+
+//-- Estados del juego
+const ESTADO = {
+  INIT: 0,
+  SAQUE: 1,
+  JUGANDO: 2,
+}
+
+//-- Variable de estado
+//-- Empezamos en el estado inicial
+let estado = ESTADO.INIT;
+
 //-- Pintar todos los objetos en el canvas
 function draw() {
-
-  //----- Dibujar la Bola
-  bola.draw();
+  //-- Dibujar bola solo en estado jugando
+  if (estado == ESTADO.JUGANDO) {
+    bola.draw();
+  }
 
   //-- Dibujar la raqueta izquierda
   raqI.draw();
@@ -42,6 +58,19 @@ function draw() {
   ctx.fillStyle = "white";
   ctx.fillText("0", 200, 80);
   ctx.fillText("1", 340, 80);
+
+  //-- Dibujar texto de saque
+  if (estado == ESTADO.SAQUE) {
+    ctx.font = "40px Arial";
+    ctx.fillStyle = "#BD1C22";
+    ctx.fillText("SACA",30,350);
+  }
+  //-- Dibujar el texto de comenzar
+  if (estado == ESTADO.INIT) {
+    ctx.font = "40px Arial";
+    ctx.fillStyle = "#DA1D23";
+    ctx.fillText("PULSA START", 20, 350);
+  }
 }
 
 //---- Bucle principal de la animación
@@ -60,14 +89,32 @@ function animacion()
   if (bola.x >= canvas.width) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vx = bola.vx * -1;
+    //-- Reproducir sonido
+    sonido_rebote.currentTime = 0;
+    sonido_rebote.play();
   }else if (bola.x <= 0 ) { //rebote lado izq
     bola.vx = bola.vx * -1;
+    sonido_rebote.currentTime = 0;
+    sonido_rebote.play();
   }
+
   if (bola.y >= canvas.height) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
+    sonido_rebote.currentTime = 0;
+    sonido_rebote.play();
   }else if (bola.y <= 0 ) {
     bola.vy = bola.vy * -1;
+    sonido_rebote.currentTime = 0;
+    sonido_rebote.play();
+  }
+  //-- Si llega al límite izquierdo, hemos perdido
+  //-- pasamos al estado de SAQUE
+  if (bola.x <= bola.size) {
+     estado = ESTADO.SAQUE;
+     bola.init();
+     console.log("Tanto!!!!");
+     return;
   }
 
 
@@ -75,11 +122,17 @@ function animacion()
   if (bola.x >= raqI.x && bola.x <=(raqI.x + raqI.width) &&
       bola.y >= raqI.y && bola.y <=(raqI.y + raqI.height)) {
     bola.vx = bola.vx * -1;
+    //-- Reproducir sonido
+    sonido_raqueta.currentTime = 0;
+    sonido_raqueta.play();
   }
   //-- Comprobar si hay colisión con la raqueta izquierda
   if (bola.x >= raqD.x && bola.x <=(raqD.x + raqD.width) &&
       bola.y >= raqD.y && bola.y <=(raqD.y + raqD.height)) {
     bola.vx = bola.vx * -1;
+    //-- Reproducir sonido
+    sonido_raqueta.currentTime = 0;
+    sonido_raqueta.play();
   }
 
 
@@ -92,6 +145,7 @@ function animacion()
 
   //-- Dibujar el nuevo frame
   draw();
+  window.requestAnimationFrame(animacion);
 }
 
 //-- Inicializa la bola: Llevarla a su posicion inicial
@@ -107,10 +161,8 @@ raqD.y_ini = 300;
 raqD.init();
 
 
-//-- Arrancar la animación
-setInterval(()=>{
-  animacion();
-},16);
+animacion()
+
 
 //-- Retrollamada de las teclas
 window.onkeydown = (e) => {
@@ -129,12 +181,21 @@ window.onkeydown = (e) => {
       raqD.v = raqD.v_ini * -1;
       break;
     case " ":
-      //-- Llevar bola a su posicion incicial
-      bola.init();
+      //-- El saque solo funciona en estado SAQUE
+      if (estado == ESTADO.SAQUE) {
+        //-- Reproducir sonido
+        sonido_raqueta.currentTime = 0;
+        sonido_raqueta.play();
+        //-- Llevar bola a su posicion incicial
+        bola.init();
+        //-- Darle velocidad
+        bola.vx = bola.vx_ini;
+        bola.vy = bola.vy_ini;
+        //-- Cambiar al estado de jugando!
+        estado = ESTADO.JUGANDO;
 
-      //-- Darle velocidad
-      bola.vx = bola.vx_ini;
-      bola.vy = bola.vy_ini;
+        return false;
+      }
     default:
   }
 }
@@ -149,4 +210,22 @@ window.onkeyup = (e) => {
   if (e.key == "q" || e.key == "a") {
     raqD.v = 0;
   }
+}
+//-- Botón de arranque
+const start = document.getElementById("start");
+
+start.onclick = () => {
+  estado = ESTADO.SAQUE;
+  console.log("SAQUE!");
+  canvas.focus();
+}
+
+//-- Boton de stop
+const stop = document.getElementById("stop");
+
+stop.onclick = () => {
+  //-- Volver al estado inicial
+  estado = ESTADO.INIT;
+  bola.init();
+  start.disabled = false;
 }
