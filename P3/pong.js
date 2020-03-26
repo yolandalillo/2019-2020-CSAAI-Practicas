@@ -86,18 +86,6 @@ function animacion()
   //-- Comprobar si la bola ha alcanzado el límite derecho
   //-- Si es así, se cambia de signo la velocidad, para
   // que "rebote" y vaya en el sentido opuesto
-  if (bola.x >= canvas.width) {
-    //-- Hay colisión. Cambiar el signo de la bola
-    bola.vx = bola.vx * -1;
-    //-- Reproducir sonido
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
-  }else if (bola.x <= 0 ) { //rebote lado izq
-    bola.vx = bola.vx * -1;
-    sonido_rebote.currentTime = 0;
-    sonido_rebote.play();
-  }
-
   if (bola.y >= canvas.height) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
@@ -110,11 +98,16 @@ function animacion()
   }
   //-- Si llega al límite izquierdo, hemos perdido
   //-- pasamos al estado de SAQUE
-  if (bola.x <= bola.size) {
+  if (bola.x >= canvas.width) {
      estado = ESTADO.SAQUE;
      bola.init();
      console.log("Tanto!!!!");
      return;
+  } else if (bola.x <= (canvas.width<0)){
+    estado = ESTADO.SAQUE;
+    bola.init();
+    console.log("Tanto!!!!");
+    return;
   }
 
 
@@ -145,7 +138,7 @@ function animacion()
 
   //-- Dibujar el nuevo frame
   draw();
-  window.requestAnimationFrame(animacion);
+  //window.requestAnimationFrame(animacion);
 }
 
 //-- Inicializa la bola: Llevarla a su posicion inicial
@@ -160,8 +153,12 @@ raqD.x_ini = 540;
 raqD.y_ini = 300;
 raqD.init();
 
-
-animacion()
+//-- Arrancar la animación
+//animacion();
+//-- Arrancar la animación
+setInterval(()=>{
+  animacion();
+},16);
 
 
 //-- Retrollamada de las teclas
