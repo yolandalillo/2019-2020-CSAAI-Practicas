@@ -13,6 +13,7 @@ const ctx = canvas.getContext("2d");
 //-- Obtener Sonidos
 const sonido_raqueta =  new Audio("pong-raqueta.mp3");
 const sonido_rebote = new Audio("pong-rebote.mp3");
+const song =  new Audio("song2.mp3");
 
 //-- Estados del juego
 const ESTADO = {
@@ -218,6 +219,8 @@ window.onkeyup = (e) => {
 const start = document.getElementById("start");
 
 start.onclick = () => {
+  song.play();
+
   estado = ESTADO.SAQUE;
   console.log("SAQUE!");
   canvas.focus();
@@ -228,6 +231,7 @@ const stop = document.getElementById("stop");
 
 stop.onclick = () => {
   //-- Volver al estado inicial
+  song.currentTime = 0;
   estado = ESTADO.INIT;
   bola.init();
   start.disabled = false;
