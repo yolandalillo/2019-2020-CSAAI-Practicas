@@ -53,12 +53,6 @@ function draw() {
   ctx.lineTo(canvas.width/2, canvas.height);
   ctx.stroke();
 
-  //------ Dibujar el tanteo
-  ctx.font = "100px Arial";
-  ctx.fillStyle = "white";
-  ctx.fillText("0", 200, 80);
-  ctx.fillText("1", 340, 80);
-
   //-- Dibujar texto de saque
   if (estado == ESTADO.SAQUE) {
     ctx.font = "40px Arial";
@@ -73,6 +67,16 @@ function draw() {
   }
 }
 
+//-- Dibujar el tanteo
+var ContadorI = 0;
+var ContadorD = 0;
+function drawCont(){
+  ctx.font = "80px fantasy";
+  ctx.fillStyle = "white";
+  ctx.fillText(ContadorI, 200, 80);
+  ctx.fillText(ContadorD, 340, 80);
+}
+
 //---- Bucle principal de la animación
 function animacion()
 {
@@ -83,9 +87,6 @@ function animacion()
   raqI.update();
   raqD.update();
 
-  //-- Comprobar si la bola ha alcanzado el límite derecho
-  //-- Si es así, se cambia de signo la velocidad, para
-  // que "rebote" y vaya en el sentido opuesto
   if (bola.y >= canvas.height) {
     //-- Hay colisión. Cambiar el signo de la bola
     bola.vy = bola.vy * -1;
@@ -102,12 +103,16 @@ function animacion()
      estado = ESTADO.SAQUE;
      bola.init();
      console.log("Tanto!!!!");
-     return;
-  } else if (bola.x <= (canvas.width<0)){
+     ContadorI++;
+     console.log(ContadorI);
+
+  }
+  if (bola.x <= (canvas.width<0)){
     estado = ESTADO.SAQUE;
     bola.init();
     console.log("Tanto!!!!");
-    return;
+    ContadorD++;
+    console.log(ContadorD);
   }
 
 
@@ -137,6 +142,7 @@ function animacion()
   ctx.clearRect(0,0, canvas.width, canvas.height);
 
   //-- Dibujar el nuevo frame
+  drawCont();
   draw();
   //window.requestAnimationFrame(animacion);
 }
