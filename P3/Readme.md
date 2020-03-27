@@ -14,6 +14,6 @@ INSTRUCCIONES
 CUIDADO con mover muy rápido las raquetas que no te salgas del escenario.
 
 4.Si se pulsa STOP dejamos de escuchar la canción y, los jugadores vuelven a
-empezar y sus marcadores vuelven a estar a cero.
+empezar con los marcadores a cero.
 
           ¡¡QUE DISFRUTES DEL JUEGO!!
