@@ -231,7 +231,7 @@ const stop = document.getElementById("stop");
 
 stop.onclick = () => {
   //-- Volver al estado inicial
-  song.pause();;
+  song.pause();
   estado = ESTADO.INIT;
   bola.init();
   start.disabled = false;
