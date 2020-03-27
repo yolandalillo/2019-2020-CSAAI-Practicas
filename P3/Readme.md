@@ -11,7 +11,7 @@ INSTRUCCIONES
 
 3.Empezar a jugar, importante la raqueta izquierda se mueve con las flechas ↑
 (arriba) y  ↓ (abajo) y la raqueta derecha se mueve con a (arriba) y q (abajo).
-Cuidado con mover muy rápido las raquetas que no te salgas del escenario.
+CUIDADO con mover muy rápido las raquetas que no te salgas del escenario.
 
 4.Si se pulsa STOP dejamos de escuchar la canción y, los jugadores vuelven a
 empezar y sus marcadores vuelven a estar a cero.
