@@ -69,13 +69,13 @@ function draw() {
 }
 
 //-- Dibujar el tanteo
-var ContadorI = 0;
-var ContadorD = 0;
+var MarcadorI = 0;
+var MarcadorD = 0;
 function drawCont(){
   ctx.font = "80px fantasy";
   ctx.fillStyle = "white";
-  ctx.fillText(ContadorI, 200, 80);
-  ctx.fillText(ContadorD, 340, 80);
+  ctx.fillText(MarcadorI, 200, 80);
+  ctx.fillText(MarcadorD, 340, 80);
 }
 
 //---- Bucle principal de la animación
@@ -104,16 +104,16 @@ function animacion()
      estado = ESTADO.SAQUE;
      bola.init();
      console.log("Tanto!!!!");
-     ContadorI++;
-     console.log(ContadorI);
+     MarcadorI++;
+     console.log(MarcadorI);
 
   }
   if (bola.x <= (canvas.width<0)){
     estado = ESTADO.SAQUE;
     bola.init();
     console.log("Tanto!!!!");
-    ContadorD++;
-    console.log(ContadorD);
+    MarcadorD++;
+    console.log(MarcadorD);
   }
 
 
@@ -234,5 +234,7 @@ stop.onclick = () => {
   song.pause();
   estado = ESTADO.INIT;
   bola.init();
+  MarcadorD = 0;
+  MarcadorI = 0;
   start.disabled = false;
 }

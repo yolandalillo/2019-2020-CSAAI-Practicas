@@ -5,7 +5,7 @@ escucha al pulsar STRAT es de esta serie.
 
 INSTRUCCIONES
 
-1.Pulsa start para comenzar.
+1.Pulsa START para comenzar.
 
 2.Sacar con el espacio.
 
@@ -13,11 +13,7 @@ INSTRUCCIONES
 (arriba) y  ↓ (abajo) y la raqueta derecha se mueve con a (arriba) y q (abajo).
 Cuidado con mover muy rápido las raquetas que no te salgas del escenario.
 
-ACLARACIÓN
-
-El juego es infinito porque todos somos muy competitivos y nunca nos gusta
-perder, así podremos seguir jugando tanto como se quiera.
-Para volver a empezar el juego y tener los marcadores a cero es necesario
-reiniciar la página.
+4.Si se pulsa STOP dejamos de escuchar la canción y, los jugadores vuelven a
+empezar y sus marcadores vuelven a estar a cero.
 
           ¡¡QUE DISFRUTES DEL JUEGO!!
