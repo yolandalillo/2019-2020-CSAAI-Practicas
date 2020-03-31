@@ -149,3 +149,5 @@ Variable que introducimos para controlar eso del buffer. El tiempo desde que has
 los reproduces ese es el tiempo de playout.
 (Ver esquemas ejemplo)
   *Ejercicios
+Intentar los dos ejercicios que hay.
+Ejercicio 2 solucion es el tiempo de playout minimos sería de 50 ms, y en el ejercicio 3 sería de 30ms.
