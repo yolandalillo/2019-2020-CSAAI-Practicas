@@ -145,7 +145,7 @@ function animacion()
   //-- Dibujar el nuevo frame
   drawCont();
   draw();
-  //window.requestAnimationFrame(animacion);
+  window.requestAnimationFrame(animacion); //Mas optimo que setInterval
 }
 
 //-- Inicializa la bola: Llevarla a su posicion inicial
@@ -161,11 +161,11 @@ raqD.y_ini = 300;
 raqD.init();
 
 //-- Arrancar la animación
-//animacion();
+animacion();
 //-- Arrancar la animación
-setInterval(()=>{
-  animacion();
-},16);
+//setInterval(()=>{
+//  animacion();
+//},16);
 
 
 //-- Retrollamada de las teclas
