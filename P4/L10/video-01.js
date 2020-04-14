@@ -1,3 +1,5 @@
+//--Mirar S6 donde hay ejemplos de autoreproduccion, video con controles,
+//--control desde js, youtube.
 console.log("Ejecutando JS...");
 
 //--Obtener elemento de vído y configurarlo
