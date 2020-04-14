@@ -18,7 +18,7 @@ const stop = document.getElementById("stop");
 //--Función de retrollamda del botón ver
 play.onclick = () =>{
   console.log("Click!");
-  video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente1.mp4"
+  video1.src="https://github.com/yolandalillo/mis_recursos/raw/master/video1.mp4"
   video1.play();
 };
 
