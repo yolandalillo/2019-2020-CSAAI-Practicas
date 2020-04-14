@@ -9,7 +9,7 @@ video1.height = 100;
 
 //--Imagen estática a mostrar cuando el video no
 //-- ha arrancado
-video1.poster ="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10/test.png";
+video1.poster ="https://github.com/yolandalillo/mis_recursos/raw/master/descarga.png";
 
 //--Obtener los botones
 const play = document.getElementById("play");
