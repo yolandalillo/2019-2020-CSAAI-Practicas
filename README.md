@@ -4,6 +4,8 @@ Curso 2019-2020
 
 Este repositorio debe estar configurado como una página web.
 
+Las prácticas siguen la temática de la serie la casa de papel.
+
 Práctica 1 Curriculum:
 https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P1/
 
