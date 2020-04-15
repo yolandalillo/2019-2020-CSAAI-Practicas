@@ -18,25 +18,9 @@ const video3 = document.getElementById("video3");
 video3.width = 200; //--Tamaño de la pantalla de video
 video3.height = 100;
 //--Obtener los botones
-const play = document.getElementById("play1");
-const play2 = document.getElementById("play2");
-const play3 = document.getElementById("play3");
 
+video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
 
-//--Función de retrollamda del botón ver
-play.onclick = () =>{
-  console.log("Click!");
-  video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
-  video1.play();
-};
+video2.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4"
 
-play2.onclick = () =>{
-  console.log("Click!");
-  video2.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4"
-  video2.play();
-};
-play3.onclick = () =>{
-  console.log("Click!");
-  video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/video1.mp4"
-  video3.play();
-};
+video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/video1.mp4"
