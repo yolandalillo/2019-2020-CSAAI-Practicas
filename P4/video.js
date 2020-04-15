@@ -7,12 +7,12 @@ console.log("Ejecutando JS...");
 
 //--Obtener elemento de vído y configurarlo
 const video1 =  document.getElementById("video1")
-video1.width = 200; //--Tamaño de la pantalla de video
-video1.height = 100;
+video1.width = 250; //--Tamaño de la pantalla de video
+video1.height = 150;
 
 const video2 = document.getElementById("video2");
-video2.width = 200; //--Tamaño de la pantalla de video
-video2.height = 100;
+video2.width = 250; //--Tamaño de la pantalla de video
+video2.height = 150;
 
 //--Imagen estática a mostrar cuando el video no
 //-- ha arrancado
@@ -21,8 +21,8 @@ video2.poster ="https://github.com/myTeachingURJC/2019-2020-CSAAI/raw/master/L10
 
 
 //--Obtener los botones
-const play = document.getElementById("play");
-const stop = document.getElementById("stop");
+const play = document.getElementById("play1");
+const stop = document.getElementById("stop1");
 const play2 = document.getElementById("play2");
 const stop2 = document.getElementById("stop2");
 
@@ -31,6 +31,7 @@ play.onclick = () =>{
   console.log("Click!");
   video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
   video1.play();
+  
 };
 
 play2.onclick = () =>{

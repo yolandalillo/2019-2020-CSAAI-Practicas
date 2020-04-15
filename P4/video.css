@@ -1,0 +1,13 @@
+
+#parte1 {
+  margin:auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  float:left; /*Posicionamiento flotante */
+}
+#parte2 {
+  margin:auto;
+  padding-left: 30px;
+  padding-right: 30px;
+  float:left;
+}
