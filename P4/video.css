@@ -1,16 +1,25 @@
+body {
+    background-color: #BDAEB0;
+}
 
+.videos{
+  margin-left: 60px;
+  margin-right: 60px;
+
+}
 #parte1 {
   margin:auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   float:left; /*Posicionamiento flotante */
 }
 #parte2 {
   margin:auto;
-  padding-left: 30px;
-  padding-right: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
   float:left;
 }
+
 #parte3 {
   margin:auto;
   padding-left: 50px;
@@ -23,10 +32,31 @@
   margin-right: auto;
   width: 820px;
   height: 500px;
-  padding-top: 200px;
+}
+#video4{
+  margin-bottom: 20px;
+  margin-top: 20px;
+  float: left;
+}
+button{
+  margin-left: 50px;
+  margin-right: 50px;
+  border: ridge;
+  border-color: #DA1D23;
+  background-color: #d2e3c8;
+  padding: 5px;
+  font-size: 20px;
+}
+button:hover{
+  color:#d2e3c8;
+  background-color:#DA1D23;
 }
 
-#video4{
-  margin: auto;
-  float: left;
+p{
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 350px;
+  margin-right: 350px;
+  font-size: 20px;
+
 }

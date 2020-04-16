@@ -19,34 +19,50 @@ video3.width = 300; //--Tamaño de la pantalla de video
 video3.height = 200;
 
 const video4= document.getElementById("video4");
-video4.width = 600;
+video4.width = 820;
 video4.height = 500;
 //--Obtener los botones
 
+video4.poster ="https://github.com/yolandalillo/mis_recursos/raw/master/cb.jpg";
+
 video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
 
-video2.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente2.mp4"
+video2.src="https://github.com/yolandalillo/mis_recursos/raw/master/casapap2.mp4"
 
 video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/video1.mp4"
 
-video4.poster ="https://github.com/yolandalillo/mis_recursos/raw/master/descarga.png";
 
+//--Condición si paso el ratón por encima se reproduce el sonido
+video2.onmouseover = () => {
+    video2.muted = false;
+}
+video2.onmouseout = () => {
+    video2.muted = true;
+}
 
 play1.onclick = () =>{
   console.log("Click video 1");
+  video4.poster = false;
   video4.src= video1.src;
+  video4.muted = false;
   video4.currentTime = video1.currentTime;
 
 };
+
 play2.onclick = () =>{
   console.log("Click video 1");
+  video4.poster = false;
   video4.src= video2.src;
+  video4.muted = false;
   video4.currentTime = video2.currentTime;
 
 };
 play3.onclick = () =>{
   console.log("Click video 1");
+  video4.poster = false;
+
   video4.src= video3.src;
+  video4.muted = false;
   video4.currentTime = video3.currentTime;
 
 };
