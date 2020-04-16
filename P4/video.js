@@ -60,7 +60,6 @@ play2.onclick = () =>{
 play3.onclick = () =>{
   console.log("Click video 1");
   video4.poster = false;
-
   video4.src= video3.src;
   video4.muted = false;
   video4.currentTime = video3.currentTime;
