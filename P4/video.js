@@ -33,12 +33,12 @@ video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/video1.mp4"
 
 
 //--Condición si paso el ratón por encima se reproduce el sonido
-video2.onmouseover = () => {
-    video2.muted = false;
-}
-video2.onmouseout = () => {
-    video2.muted = true;
-}
+//--video2.onmouseover = () => {
+//--    video2.muted = false;
+//--}
+//--video2.onmouseout = () => {
+//--    video2.muted = true;
+//-}
 
 play1.onclick = () =>{
   console.log("Click video 1");
