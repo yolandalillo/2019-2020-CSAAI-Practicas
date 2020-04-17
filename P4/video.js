@@ -34,6 +34,9 @@ video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/casapap3.mp4
 play1.onclick = () =>{
   console.log("Click video 1");
   video4.poster = false;
+  video1.style.border = 'dotted #DA1D23'
+  video2.style.border = null;
+  video3.style.border = null;
   video4.src= video1.src;
   video4.muted = false;
   video4.currentTime = video1.currentTime;
@@ -43,6 +46,9 @@ play1.onclick = () =>{
 play2.onclick = () =>{
   console.log("Click video 1");
   video4.poster = false;
+  video2.style.border = 'dotted #DA1D23'
+  video1.style.border = null;
+  video3.style.border = null;
   video4.src= video2.src;
   video4.muted = false;
   video4.currentTime = video2.currentTime;
@@ -51,6 +57,9 @@ play2.onclick = () =>{
 play3.onclick = () =>{
   console.log("Click video 1");
   video4.poster = false;
+  video3.style.border = 'dotted #DA1D23'
+  video2.style.border = null;
+  video1.style.border = null;
   video4.src= video3.src;
   video4.muted = false;
   video4.currentTime = video3.currentTime;
