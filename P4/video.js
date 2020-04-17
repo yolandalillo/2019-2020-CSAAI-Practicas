@@ -21,6 +21,7 @@ video3.height = 200;
 const video4= document.getElementById("video4");
 video4.width = 820;
 video4.height = 500;
+
 //--Obtener los botones
 
 video4.poster ="https://github.com/yolandalillo/mis_recursos/raw/master/cb.jpg";
