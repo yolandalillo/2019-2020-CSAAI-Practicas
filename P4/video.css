@@ -1,5 +1,5 @@
 body {
-    background-color: #BDAEB0;
+    background-color: #899082;
 }
 
 .videos{
@@ -7,45 +7,36 @@ body {
   margin-right: 60px;
 
 }
-#parte1 {
+#parte1,#parte2,#parte3, #parte4{
   margin:auto;
   padding-left: 50px;
   padding-right: 50px;
   float:left; /*Posicionamiento flotante */
 }
-#parte2 {
-  margin:auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  float:left;
-}
 
-#parte3 {
-  margin:auto;
-  padding-left: 50px;
-  padding-right: 50px;
-  float:left;
-}
 .videoprincipal{
-  margin: auto;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
   width: 820px;
   height: 500px;
 }
+
 #video4{
   margin-bottom: 20px;
-  margin-top: 20px;
+  margin-top: 10px;
   float: left;
 }
 button{
   margin-left: 50px;
   margin-right: 50px;
-  border: ridge;
-  border-color: #DA1D23;
+  border-style: outset;
+  border-color: black;
   background-color: #d2e3c8;
   padding: 5px;
   font-size: 20px;
+  margin-bottom:20px;
 }
 button:hover{
   color:#d2e3c8;
@@ -54,9 +45,10 @@ button:hover{
 
 p{
   text-align: center;
-  margin-top: 50px;
+  font-family: "Segoe UI";
+  font-weight: bold;
+  margin-top: 30px;
   margin-left: 350px;
   margin-right: 350px;
-  font-size: 20px;
-
+  font-size: 22px;
 }

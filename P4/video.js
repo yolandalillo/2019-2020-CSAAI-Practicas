@@ -25,20 +25,11 @@ video4.height = 500;
 
 video4.poster ="https://github.com/yolandalillo/mis_recursos/raw/master/cb.jpg";
 
-video1.src="https://gsyc.urjc.es/jmplaza/csaai/realizador-fuente3.mp4"
+video1.src="https://github.com/yolandalillo/mis_recursos/raw/master/casapap1.mp4"
 
 video2.src="https://github.com/yolandalillo/mis_recursos/raw/master/casapap2.mp4"
 
-video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/video1.mp4"
-
-
-//--Condición si paso el ratón por encima se reproduce el sonido
-//--video2.onmouseover = () => {
-//--    video2.muted = false;
-//--}
-//--video2.onmouseout = () => {
-//--    video2.muted = true;
-//-}
+video3.src="https://github.com/yolandalillo/mis_recursos/raw/master/casapap3.mp4"
 
 play1.onclick = () =>{
   console.log("Click video 1");
