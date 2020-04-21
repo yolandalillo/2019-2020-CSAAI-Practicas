@@ -1,4 +1,4 @@
-# Práctica 4: VIDEO
+# Práctica 4: Video
 
 Bienvenido al realizador de TV.
 

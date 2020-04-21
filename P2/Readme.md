@@ -1,4 +1,4 @@
-# Práctica 2: CALCULADORA
+# Práctica 2: Calculadora
 
 Bienvenido a mi calculadora.
 
