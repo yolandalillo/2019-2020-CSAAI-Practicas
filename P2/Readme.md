@@ -1,7 +1,21 @@
 # Práctica 2
 
-Se ruega al usuario no generar errores del tipo 2++++++3
-o cualquiera similar porque no estamos ante una calculadora
-tan profesional.
-Si se puede eliminar errores uno a uno, o también borrar
-todo y empezar la operación desde el principio.
+Bienvenido a mi calculadora.
+
+INSTRUCCIONES
+
+-Su funcionamiento es similar a cualquier calculadora
+básica.
+
+-Se puede eliminar errores uno a uno.
+
+-Borrar todo y empezar desde el principio.
+
+-Realizas las operaciones básicas de suma, resta, multiplicación, división y exponencial.
+
+-También acepta numeros decimales.
+
+ADVERTENCIA
+
+-Se ruega al usuario no generar errores del tipo 2++++++3
+o cualquiera similar porque no estamos ante una calculadora tan profesional.
