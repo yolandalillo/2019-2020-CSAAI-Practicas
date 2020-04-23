@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Filtro</title>
+    <link rel="stylesheet" href="filtro.css">
+    <script src="filtro.js" defer></script>
+  </head>
+  <body>
+    <h1 id="imgoriginal">Imagen original</h1>
+    <img src="FPGA.jpg" id="imagensrc">
+    <h1 id="imgmanipulada">Imagen manipulada</h1>
+    <canvas id="canvas"></canvas>
+    <br>
+    <div class="controles">
+      <button id="grises"> ESCALA DE GRISES</button>
+      <button id="colores">COLORES</button>
+      <button id="negativo">NEGATIVO</button>
+      <br>
+      <b>ROJO</b>
+      <input type="range" id="deslizadorR" min="0" max="255" value="255"/>
+      <p id="range_valueR">255</p>
+      <b>VERDE</b>
+      <input type="range" id="deslizadorG" min="0" max="255" value="255"/>
+      <p id="range_valueG">255</p>
+      <b>AZUL</b>
+      <input type="range" id="deslizadorB" min="0" max="255" value="255"/>
+      <p id="range_valueB">255</p>
+    </div>
+  </body>
+</html>
