@@ -13,6 +13,7 @@ const deslizadorB = document.getElementById('deslizadorB');
 const range_valueR = document.getElementById('range_valueR');
 const range_valueG = document.getElementById('range_valueG');
 const range_valueB = document.getElementById('range_valueB');
+//-- Botones
 const grises = document.getElementById('grises');
 const original = document.getElementById('original');
 const negativo = document.getElementById('negativo');
