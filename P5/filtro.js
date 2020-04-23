@@ -48,24 +48,37 @@ original.onclick = () => {
     console.log("Imagen original");
     ctx.drawImage(img, 0,0);
 }
-
-//funcion deslizadores (){
+function colores() {
   //--Situar la imagen original en el canvas
-  //ctx.drawImage(img, 0,0);
-  //range_valueR.innerHTML = deslizadorR.value;
-  //range_valueG.innerHTML = deslizadorG.value;
-  //range_valueB.innerHTML = deslizadorB.value;
+  ctx.drawImage(img, 0,0);
+  //--Mostrar nuevos valores del deslizador
+  range_valueR.innerHTML = deslizadorR.value;
+  range_valueG.innerHTML = deslizadorG.value;
+  range_valueB.innerHTML = deslizadorB.value;
+  //--Obtener la imagen del canvas en pixeles
+  let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
+  //--Obtener el array con todos los píxeles
+  let data = imgData.data;
+  //--Obtener umbrales
+  let umbralR = deslizadorR.value
+  let umbralG = deslizadorG.value
+  let umbralB = deslizadorB.value
+  //--Umbrales
+  //--Poner imagen en canvas
+
 
   //-- Funcion de retrollamada de los deslizadores
-  //deslizadorR.oninput = () => {
+  deslizadorR.oninput = () => {
 
-  //}
-  //deslizadorB.oninput = () => {
+  }
+  deslizadorB.oninput = () => {
 
-  //}
-  //deslizadorB.oninput = () => {
+  }
+  deslizadorB.oninput = () => {
 
-  //}
-//}
+  }
+
+}
+
 
 console.log("Fin...");
