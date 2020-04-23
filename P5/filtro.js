@@ -15,6 +15,7 @@ const range_valueG = document.getElementById('range_valueG');
 const range_valueB = document.getElementById('range_valueB');
 const grises = document.getElementById('grises');
 const original = document.getElementById('original');
+const negativo = document.getElementById('negativo');
 
 //-- Función de retrollamada de imagen cargada
 
@@ -48,6 +49,27 @@ original.onclick = () => {
     console.log("Imagen original");
     ctx.drawImage(img, 0,0);
 }
+
+negativo.onclick = () =>{
+  console.log("Imagen negativa");
+  //--Obtener la imagen del canvas en pixeles
+  let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
+  //--Obtener el array con todos los píxeles
+  let data = imgData.data;
+  for (let i = 0; i < data.length; i+=4) {
+    //--Calcular RGB complementario
+    red_neg = 255 - data[i];
+    green_neg = 255 - data[i+1];
+    blue_neg = 255 - data[i+2];
+
+    data[i] = red_neg;
+    data[i+1] = red_neg;
+    data[i+2] = red_neg;
+  }
+  //--Poner la imagen modificada en el canvas
+  ctx.putImageData(imgData, 0,0);
+}
+
 function colores() {
   //--Situar la imagen original en el canvas
   ctx.drawImage(img, 0,0);
