@@ -18,4 +18,6 @@ https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P3/pong.html
 Práctica 4 Vídeo:
 https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P4/video.html
 
-Práctica 5 Procesado de imagen
+Práctica 5 Procesado de imagen:https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P5/filtro.html
+
+Se recomienda abrir la prácticas con el navegador Firefox para un funcionamiento más eficiente, aunque vale cualquier navegador.

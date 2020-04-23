@@ -14,7 +14,7 @@ const range_valueR = document.getElementById('range_valueR');
 const range_valueG = document.getElementById('range_valueG');
 const range_valueB = document.getElementById('range_valueB');
 const grises = document.getElementById('grises');
-const colores = document.getElementById('colores');
+const original = document.getElementById('original');
 
 //-- Función de retrollamada de imagen cargada
 
@@ -43,24 +43,29 @@ grises.onclick = () => {
   //--Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0,0);
 }
+original.onclick = () => {
+    //--Situar la imagen original en el canvas
+    console.log("Imagen original");
+    ctx.drawImage(img, 0,0);
+}
 
-colores.onclick = () => {
+//funcion deslizadores (){
   //--Situar la imagen original en el canvas
-  ctx.drawImage(img, 0,0);
-  range_valueR.innerHTML = deslizadorR.value;
-  range_valueG.innerHTML = deslizadorG.value;
-  range_valueB.innerHTML = deslizadorB.value;
+  //ctx.drawImage(img, 0,0);
+  //range_valueR.innerHTML = deslizadorR.value;
+  //range_valueG.innerHTML = deslizadorG.value;
+  //range_valueB.innerHTML = deslizadorB.value;
 
   //-- Funcion de retrollamada de los deslizadores
-  deslizadorR.oninput = () => {
+  //deslizadorR.oninput = () => {
 
-  }
-  deslizadorB.oninput = () => {
+  //}
+  //deslizadorB.oninput = () => {
 
-  }
-  deslizadorB.oninput = () => {
+  //}
+  //deslizadorB.oninput = () => {
 
-  }
-}
+  //}
+//}
 
 console.log("Fin...");
