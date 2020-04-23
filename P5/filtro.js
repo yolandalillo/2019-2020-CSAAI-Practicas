@@ -18,7 +18,6 @@ const original = document.getElementById('original');
 const negativo = document.getElementById('negativo');
 const sepia = document.getElementById('sepia');
 
-
 //-- Función de retrollamada de imagen cargada
 
 img.onload = function () {
@@ -107,21 +106,31 @@ function colores() {
   let umbralG = deslizadorG.value
   let umbralB = deslizadorB.value
   //--Umbrales
+  for (var i = 0; i < data.length; i+=4) {
+      if (data[i] > umbralR){
+        data[i] = umbralR;
+      }
+      if (data[i+1] > umbralG){
+        data[i+1] = umbralG;
+      }
+      if (data[i+2] > umbralB){
+        data[i+2] = umbralB;
+      }
+  }
   //--Poner imagen en canvas
 
+  ctx.putImageData(imgData, 0,0);
+}
 
   //-- Funcion de retrollamada de los deslizadores
   deslizadorR.oninput = () => {
-
+    colores();
   }
   deslizadorB.oninput = () => {
-
+    colores();
   }
   deslizadorB.oninput = () => {
-
+    colores();
   }
-
-}
-
 
 console.log("Fin...");

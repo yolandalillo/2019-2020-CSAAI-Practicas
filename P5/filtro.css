@@ -5,3 +5,13 @@ h1{
   column-count: 2;
   text-align: center;
 }
+.texto,h2{
+  column-count: 2;
+  margin-top: 0px;
+  text-align: center;
+  margin-left: 100px;
+}
+
+.controles{
+  text-align: center;
+}
