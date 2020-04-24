@@ -1,9 +1,11 @@
 body {background-image: url("o.jpg");
 }
-
+@font-face{ font-family: "BebasNeue-Regular";
+          src: url("BebasNeue-Regular.ttf");}
 h1{
   text-align: center;
-  font-family: "Segoe UI";
+  font-family: "BebasNeue-Regular";
+  font-size: 40px;
 
 }
 .imagenes{
@@ -11,7 +13,8 @@ h1{
   text-align: center;
 }
 .texto,h2{
-  font-family: "Segoe UI";
+  font-family: "BebasNeue-Regular";
+  font-size: 30px;
 
   column-count: 2;
   margin-top: 0px;
@@ -21,6 +24,7 @@ h1{
 
 .controles,.deslizadores{
   text-align: center;
+
 
 }
 
@@ -35,7 +39,9 @@ button{
   -webkit-border-radius: 50px;
   -moz-border-radius: 50px;
   border-radius: 50px;
-  font-size:25px;
+  font-size:30px;
+  font-family: "BebasNeue-Regular";
+
   line-height:32px;
 }
 button:hover{
