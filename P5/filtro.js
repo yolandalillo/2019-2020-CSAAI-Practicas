@@ -33,6 +33,7 @@ img.onload = function () {
 
 };
 
+//-- Botón grises
 grises.onclick = () => {
   console.log("Escala de grises");
   ctx.drawImage(img, 0,0);
@@ -50,6 +51,8 @@ grises.onclick = () => {
   ctx.putImageData(imgData, 0,0);
 
 }
+
+//-- Botón original
 original.onclick = () => {
     //--Situar la imagen original en el canvas
     console.log("Imagen original");
@@ -57,6 +60,7 @@ original.onclick = () => {
 
 }
 
+//-- Botón negativo
 negativo.onclick = () =>{
   console.log("Imagen negativa");
   ctx.drawImage(img, 0,0);
@@ -78,6 +82,7 @@ negativo.onclick = () =>{
   ctx.putImageData(imgData, 0,0);
 }
 
+//-- Botón sepia
 sepia.onclick = () => {
   console.log("Imagen en sepia");
   ctx.drawImage(img, 0,0);
@@ -98,6 +103,7 @@ sepia.onclick = () => {
 
 
 }
+//-- Botón abajo
 
 abajo.onclick = () => {
   console.log("Imagen boca abajo");
@@ -139,7 +145,7 @@ function colores() {
   ctx.putImageData(imgData, 0,0);
 }
 
-  //-- Funcion de retrollamada de los deslizadores
+//-- Funcion de retrollamada de los deslizadores
 deslizadores.onclick = ()  => {
   ctx.drawImage(img, 0,0);
 
