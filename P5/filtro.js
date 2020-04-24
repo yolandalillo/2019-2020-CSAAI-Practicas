@@ -18,6 +18,8 @@ const grises = document.getElementById('grises');
 const original = document.getElementById('original');
 const negativo = document.getElementById('negativo');
 const sepia = document.getElementById('sepia');
+const abajo = document.getElementById('abajo');
+
 
 //-- Función de retrollamada de imagen cargada
 
@@ -33,6 +35,7 @@ img.onload = function () {
 
 grises.onclick = () => {
   console.log("Escala de grises");
+  ctx.drawImage(img, 0,0);
   var brillo = 0;
   //--Obtener la imagen del canvas en pixeles
   let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
@@ -45,15 +48,18 @@ grises.onclick = () => {
   }
   //--Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0,0);
+
 }
 original.onclick = () => {
     //--Situar la imagen original en el canvas
     console.log("Imagen original");
     ctx.drawImage(img, 0,0);
+
 }
 
 negativo.onclick = () =>{
   console.log("Imagen negativa");
+  ctx.drawImage(img, 0,0);
   //--Obtener la imagen del canvas en pixeles
   let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
   //--Obtener el array con todos los píxeles
@@ -74,6 +80,7 @@ negativo.onclick = () =>{
 
 sepia.onclick = () => {
   console.log("Imagen en sepia");
+  ctx.drawImage(img, 0,0);
   var luminosidad = 0;
   //--Obtener la imagen del canvas en pixeles
   let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
@@ -89,6 +96,15 @@ sepia.onclick = () => {
   //--Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0,0);
 
+
+}
+
+abajo.onclick = () => {
+
+  ctx.drawImage(img, 0,0);
+  ctx.translate(0,2*(img.height)/2);
+  ctx.scale(1,-1);
+  ctx.drawImage(img, 0,0);
 }
 
 function colores() {
@@ -124,14 +140,18 @@ function colores() {
 }
 
   //-- Funcion de retrollamada de los deslizadores
-  deslizadorR.oninput = () => {
-    colores();
-  }
-  deslizadorB.oninput = () => {
-    colores();
-  }
-  deslizadorB.oninput = () => {
-    colores();
-  }
+deslizadores.onclick = ()  => {
+  ctx.drawImage(img, 0,0);
+
+    deslizadorR.oninput = () => {
+      colores();
+    }
+    deslizadorB.oninput = () => {
+      colores();
+    }
+    deslizadorB.oninput = () => {
+      colores();
+    }
+}
 
 console.log("Fin...");
