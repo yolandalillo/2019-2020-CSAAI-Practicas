@@ -2,6 +2,9 @@ body {background-image: url("o.jpg");
 }
 @font-face{ font-family: "BebasNeue-Regular";
           src: url("BebasNeue-Regular.ttf");}
+
+@font-face{ font-family: "BebasNeue-Book";
+            src: url("BebasNeue-Book.ttf");}
 h1{
   text-align: center;
   font-family: "BebasNeue-Regular";
@@ -15,7 +18,6 @@ h1{
 .texto,h2{
   font-family: "BebasNeue-Regular";
   font-size: 30px;
-
   column-count: 2;
   margin-top: 0px;
   text-align: center;
@@ -40,7 +42,7 @@ button{
   -moz-border-radius: 50px;
   border-radius: 50px;
   font-size:30px;
-  font-family: "BebasNeue-Regular";
+  font-family: "BebasNeue-Book";
 
   line-height:32px;
 }
