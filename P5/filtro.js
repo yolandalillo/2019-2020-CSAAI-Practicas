@@ -100,7 +100,7 @@ sepia.onclick = () => {
 }
 
 abajo.onclick = () => {
-
+  console.log("Imagen boca abajo");
   ctx.drawImage(img, 0,0);
   ctx.translate(0,2*(img.height)/2);
   ctx.scale(1,-1);
@@ -144,12 +144,15 @@ deslizadores.onclick = ()  => {
   ctx.drawImage(img, 0,0);
 
     deslizadorR.oninput = () => {
+      console.log("Deslizador rojo");
+      colores();
+    }
+    deslizadorG.oninput = () => {
+      console.log("Deslizador verde");
       colores();
     }
     deslizadorB.oninput = () => {
-      colores();
-    }
-    deslizadorB.oninput = () => {
+      console.log("Deslizador azul");
       colores();
     }
 }
