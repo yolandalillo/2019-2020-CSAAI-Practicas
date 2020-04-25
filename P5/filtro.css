@@ -24,10 +24,15 @@ h1{
   margin-left: 100px;
 }
 
-.controles,.deslizadores{
+.deslizadores{
+  font-family: "BebasNeue-Regular";
+  font-size: 20px;
+  column-count: 3;
+  margin-left: 200px;
+}
+
+.controles{
   text-align: center;
-
-
 }
 
 button{

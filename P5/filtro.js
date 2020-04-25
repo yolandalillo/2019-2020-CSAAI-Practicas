@@ -109,9 +109,8 @@ sepia.onclick = () => {
   }
   //--Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0,0);
-
-
 }
+
 //-- Botón abajo
 
 abajo.onclick = () => {
