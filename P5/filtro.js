@@ -151,6 +151,7 @@ function posicionImagen(){
 
 function colores() {
   //--Situar la imagen original en el canvas
+  posicionImagen();
   ctx.drawImage(img, 0,0);
   //--Mostrar nuevos valores del deslizador
   range_valueR.innerHTML = deslizadorR.value;
@@ -184,7 +185,6 @@ function colores() {
 
 deslizadores.onclick = ()  => {
   console.log("Umbrales de color");
-  posicionImagen();
   ctx.drawImage(img, 0,0);
 
     deslizadorR.oninput = () => {
