@@ -19,6 +19,8 @@ const original = document.getElementById('original');
 const negativo = document.getElementById('negativo');
 const sepia = document.getElementById('sepia');
 const abajo = document.getElementById('abajo');
+const reflejo = document.getElementById('reflejo');
+
 
 
 //-- Función de retrollamada de imagen cargada
@@ -112,6 +114,17 @@ abajo.onclick = () => {
   ctx.scale(1,-1);
   ctx.drawImage(img, 0,0);
 }
+
+//--Botón reflejo
+
+reflejo.onclick = () => {
+  console.log("Imagen reflejada");
+  ctx.drawImage(img, 0,0);
+  ctx.translate(2*(img.width)/2,0);
+  ctx.scale(-1,1);
+  ctx.drawImage(img, 0,0);
+}
+
 
 function colores() {
   //--Situar la imagen original en el canvas
