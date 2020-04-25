@@ -21,6 +21,9 @@ const sepia = document.getElementById('sepia');
 const abajo = document.getElementById('abajo');
 const reflejo = document.getElementById('reflejo');
 
+var down = false;
+var reflex = false;
+
 
 
 //-- Función de retrollamada de imagen cargada
@@ -38,6 +41,7 @@ img.onload = function () {
 //-- Botón grises
 grises.onclick = () => {
   console.log("Escala de grises");
+  posicionImagen();
   ctx.drawImage(img, 0,0);
   var brillo = 0;
   //--Obtener la imagen del canvas en pixeles
@@ -58,6 +62,7 @@ grises.onclick = () => {
 original.onclick = () => {
     //--Situar la imagen original en el canvas
     console.log("Imagen original");
+    posicionImagen();
     ctx.drawImage(img, 0,0);
 
 }
@@ -65,6 +70,7 @@ original.onclick = () => {
 //-- Botón negativo
 negativo.onclick = () =>{
   console.log("Imagen negativa");
+  posicionImagen();
   ctx.drawImage(img, 0,0);
   //--Obtener la imagen del canvas en pixeles
   let imgData = ctx.getImageData(0,0,canvas.width, canvas.height);
@@ -87,6 +93,7 @@ negativo.onclick = () =>{
 //-- Botón sepia
 sepia.onclick = () => {
   console.log("Imagen en sepia");
+  posicionImagen();
   ctx.drawImage(img, 0,0);
   var luminosidad = 0;
   //--Obtener la imagen del canvas en pixeles
@@ -113,6 +120,7 @@ abajo.onclick = () => {
   ctx.translate(0,2*(img.height)/2);
   ctx.scale(1,-1);
   ctx.drawImage(img, 0,0);
+  down = true;
 }
 
 //--Botón reflejo
@@ -123,6 +131,18 @@ reflejo.onclick = () => {
   ctx.translate(2*(img.width)/2,0);
   ctx.scale(-1,1);
   ctx.drawImage(img, 0,0);
+  reflex = true;
+}
+
+function posicionImagen(){
+  if(down == true){
+    abajo.onclick();
+    down = false;
+  }
+  if(reflex == true){
+    reflejo.onclick();
+    reflex = false;
+  }
 }
 
 
