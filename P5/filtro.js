@@ -9,10 +9,12 @@ const ctx =  canvas.getContext('2d');
 const deslizadorR = document.getElementById('deslizadorR');
 const deslizadorG = document.getElementById('deslizadorG');
 const deslizadorB = document.getElementById('deslizadorB');
+
  //-- Valores de los deslizadores
 const range_valueR = document.getElementById('range_valueR');
 const range_valueG = document.getElementById('range_valueG');
 const range_valueB = document.getElementById('range_valueB');
+
 //-- Botones
 const grises = document.getElementById('grises');
 const original = document.getElementById('original');
@@ -21,10 +23,9 @@ const sepia = document.getElementById('sepia');
 const abajo = document.getElementById('abajo');
 const reflejo = document.getElementById('reflejo');
 
+//-- Variables globales
 var down = false;
 var reflex = false;
-
-
 
 //-- Función de retrollamada de imagen cargada
 
@@ -35,10 +36,10 @@ img.onload = function () {
   canvas.height =  img.height;
   //--Situar la imagen original en el canvas
   ctx.drawImage(img,0,0);
-
 };
 
 //-- Botón grises
+
 grises.onclick = () => {
   console.log("Escala de grises");
   posicionImagen();
@@ -55,19 +56,19 @@ grises.onclick = () => {
   }
   //--Poner la imagen modificada en el canvas
   ctx.putImageData(imgData, 0,0);
-
 }
 
 //-- Botón original
+
 original.onclick = () => {
     //--Situar la imagen original en el canvas
     console.log("Imagen original");
     posicionImagen();
     ctx.drawImage(img, 0,0);
-
 }
 
 //-- Botón negativo
+
 negativo.onclick = () =>{
   console.log("Imagen negativa");
   posicionImagen();
@@ -91,6 +92,7 @@ negativo.onclick = () =>{
 }
 
 //-- Botón sepia
+
 sepia.onclick = () => {
   console.log("Imagen en sepia");
   posicionImagen();
@@ -133,6 +135,7 @@ reflejo.onclick = () => {
   reflex = true;
 }
 
+//-- Comprobar posición que tiene la imagen (abajo, reflejo).
 function posicionImagen(){
   if(down == true){
     abajo.onclick();
@@ -144,6 +147,7 @@ function posicionImagen(){
   }
 }
 
+//-- Función umbral de colores
 
 function colores() {
   //--Situar la imagen original en el canvas
@@ -173,12 +177,14 @@ function colores() {
       }
   }
   //--Poner imagen en canvas
-
   ctx.putImageData(imgData, 0,0);
 }
 
 //-- Funcion de retrollamada de los deslizadores
+
 deslizadores.onclick = ()  => {
+  console.log("Umbrales de color");
+  posicionImagen();
   ctx.drawImage(img, 0,0);
 
     deslizadorR.oninput = () => {
