@@ -6,19 +6,19 @@ FUNCIONAMIENTO
 
 -Tenemos una imagen original a la que le podemos aplicar varios filtros.
 
--Filtro sepia, vemos nuestra imagen en sepia.
+-Filtro SEPIA, vemos nuestra imagen en sepia.
 
--Filtro negativo, imagen en negativo.
+-Filtro NEGATIVO, imagen en negativo.
 
--Filtro escala de grises, imagen en blanco y negro.
+-Filtro ESCALA DE GRISES, imagen en blanco y negro.
 
--Filtro de colores, solo se podran utilizar cuando pulsemos el botón deslizadores. Cambia los umbrales de color RGB.
+-Filtro de colores, solo se podrá utilizar cuando pulsemos el botón DESLIZADORES. Cambia los umbrales de color RGB.
 
--Filtro imagen boca abajo, vemos la imagen boca abajo.
+-Filtro IMAGEN BOCA ABAJO, vemos la imagen boca abajo.
 
--Filtro reflejo, vemos al contrario.
+-Filtro REFLEJO, vemos al contrario.
 
--Original, vemos la imagen original.
+-ORIGINAL, vemos la imagen original.
 
 ADVERTENCIA
 
