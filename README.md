@@ -20,4 +20,4 @@ https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P4/video.html
 
 Práctica 5 Procesado de imagen:https://yolandalillo.github.io/2019-2020-CSAAI-Practicas/P5/filtro.html
 
-Se recomienda abrir la prácticas con el navegador Firefox para un funcionamiento más eficiente, aunque vale cualquier navegador.
+Se recomienda abrir la prácticas con el navegador Firefox para un funcionamiento más eficiente, aunque la práctica 5 se debe abrir desde chrome

@@ -1,7 +1,7 @@
 # Práctica 3: Videojuegoretro: PONG
 
-Bienvenido a mi pong con temática de la casa de papel, la canción que se
-escucha al pulsar STRAT es de esta serie.
+Bienvenido a mi pong con temática de la casa de papel, la canción que se escucha al pulsar STRAT es de esta serie.
+Esta práctica se debe abrir desde Chrome.
 
 INSTRUCCIONES
 
